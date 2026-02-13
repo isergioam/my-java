@@ -21,7 +21,7 @@ class EmpleadoFijo extends Empleado2{
 		super(nombre,sueldoBase);
 		this.plus = plus;
 	}
-	public int calcularSueldo() {
+	public double calcularSueldo() {
 		return this.sueldoBase + this.plus;
 	}
 }
@@ -31,6 +31,8 @@ public class Ejer019 {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
+		
+		
 
 	}
 
