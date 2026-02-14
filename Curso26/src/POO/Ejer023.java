@@ -11,7 +11,7 @@ class Parking {
 		}
 
 	}
-
+	
 	public void entrar(String matricula) {
 		for (int i = 0; i < plazas.length; i++) {
 			if (this.plazas[i] == matricula) {
