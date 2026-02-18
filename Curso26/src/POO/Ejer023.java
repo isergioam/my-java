@@ -6,9 +6,9 @@ class Parking {
 	public Parking(int cant) {
 		this.plazas = new String[cant];
 
-		for (String plaza : plazas) {
+		/*for (String plaza : plazas) {
 			plaza = null;
-		}
+		}*/
 
 	}
 	

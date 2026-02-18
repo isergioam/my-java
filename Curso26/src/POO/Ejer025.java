@@ -46,7 +46,7 @@ class Carrito {
 		for (Item item : objetos) {
 
 			if (item.nombre.equals(nombre)) {
-				objetos.remove(nombre);
+				objetos.remove(item);
 				return;
 			}
 		}
