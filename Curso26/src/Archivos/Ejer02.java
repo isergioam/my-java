@@ -24,10 +24,10 @@ public class Ejer02 {
 		
 */
 		
-		File ruta = new File("src/Archivos/saludo.txt").getAbsoluteFile();
+		File ruta = new File("src/Archivos/.").getAbsoluteFile();
 		System.out.println("La ruta del archivo es: " + ruta);
 		
-		try (BufferedWriter bw = new BufferedWriter(new FileWriter("src/Archivos/saludo.txt"))) {
+		try (BufferedWriter bw = new BufferedWriter(new FileWriter("src/Archivos/Ejer02_saludo.txt"))) {
 			
 			bw.write("Hola");
 			bw.newLine();
@@ -40,7 +40,7 @@ public class Ejer02 {
 			System.out.println("Error: " + e.getMessage());
 		}
 
-		try (BufferedReader br = new BufferedReader(new FileReader("src/Archivos/saludo.txt"))) {
+		try (BufferedReader br = new BufferedReader(new FileReader("src/Archivos/Ejer02_saludo.txt"))) {
 			String linea;
 			while ((linea = br.readLine()) != null) {
 				System.out.println(linea);

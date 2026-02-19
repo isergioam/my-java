@@ -25,7 +25,7 @@ public class Ejer01 {
 			System.out.println("No se pudo crear el archivo: " + e.getMessage());
 		}*/
 
-		try (FileWriter fw = new FileWriter("src/Archivos/log.txt", true)) {
+		try (FileWriter fw = new FileWriter("src/Archivos/Ejer01_log.txt", true)) {
 			fw.write(txt);
 		} catch (IOException e) {
 			System.out.println("Error: " + e.getMessage());
