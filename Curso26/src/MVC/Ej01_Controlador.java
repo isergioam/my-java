@@ -14,6 +14,19 @@ public class Ej01_Controlador {
 		String apellidos = modelo.getApellidos();
 		int edad = modelo.getEdad();
 		
-		vista.mostrarPersona(nombre, apellidos, edad);
+		if(nombre.length() < 3 || apellidos.length() < 3) {
+			vista.error("El nombre o apellidos deben tener más de 3 caracteres.");
+			return;
+
+		}	
+			
+		if (edad < 0) {
+			vista.error("El número debe ser positivo");
+			return;
+		} 
+			vista.mostrarPersona(nombre, apellidos, edad);
+
+
+
 	}
 }
