@@ -3,10 +3,12 @@ package sb.service;
 import org.springframework.stereotype.Service;
 
 import sb.model.Mensaje;
-import sb.model.Profesor;
 
+import java.util.*;
 @Service
-public class ServicePruebas {
+public class ServiceMensaje {
+	
+	List<Mensaje> msj = new ArrayList<Mensaje>();
 	
 	public String saludo() {
 		return "Hola Mundo!!";
@@ -20,8 +22,14 @@ public class ServicePruebas {
 		return new Mensaje("Hola", nombre);
 	}
 	
-	public Profesor profesor() {
-		return new Profesor("Sergio", "Programación");
+	public String agregarMsj(Mensaje m) {
+		msj.add(m);
+		return "Mensaje recibido";
 	}
-
+	
+	public List<Mensaje> listarMensaje(){
+		return msj;
+	}
+	
+	
 }

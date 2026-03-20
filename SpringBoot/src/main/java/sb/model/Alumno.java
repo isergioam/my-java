@@ -8,7 +8,6 @@ public class Alumno {
 	public Alumno() {}
 
 	public Alumno(int id, String nombre) {
-		super();
 		this.id = id;
 		this.nombre = nombre;
 	}
@@ -27,7 +26,5 @@ public class Alumno {
 
 	public void setNombre(String nombre) {
 		this.nombre = nombre;
-	}
-
-	
+	}	
 }

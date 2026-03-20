@@ -1,21 +1,25 @@
 package sb.controller;
 
-import sb.service.ServicePruebas;
+import sb.service.ServiceMensaje;
 
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
+
+import java.util.*;
 
 import sb.model.Mensaje;
 
 @RestController
 public class ControllerMensaje {
+	
+	private final ServiceMensaje service;
 
-	private final ServicePruebas service;
-
-	public ControllerMensaje(ServicePruebas service) {
+	public ControllerMensaje(ServiceMensaje service) {
 		this.service = service;
 	}
 
@@ -72,5 +76,26 @@ public class ControllerMensaje {
 	public Mensaje obtenerConfiguracion() {
 		return new Mensaje(saludo, autor);
 	}
+
+	@PostMapping("/mensajes")
+	public String crearMensajes(@RequestBody Mensaje msj) {
+		return service.agregarMsj(msj);
+	}
+	
+	@GetMapping("/mensajes")
+	public List<Mensaje> obtenerMensajes() {
+		return service.listarMensaje();
+	}
+	
+	@PostMapping("/mensaje")
+	public Mensaje crearMensaje(@RequestBody Mensaje mensaje) {
+		return mensaje;
+	}
+	
+    @PostMapping("/info")
+    public String crearInfo(@RequestBody Mensaje mensaje) {
+        return "Frase: " + mensaje.getTexto()
+                + " de " + mensaje.getAutor();
+    }
 
 }

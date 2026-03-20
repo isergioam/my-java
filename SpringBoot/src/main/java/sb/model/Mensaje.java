@@ -1,9 +1,5 @@
 package sb.model;
 
-
-/**
- * Clase sencilla para representar un mensaje.
- */
 public class Mensaje {
 
     private String texto;
