@@ -1,0 +1,44 @@
+package com.paco.productojpa.dto;
+
+/**
+ * DTO que representa los datos que llegan desde el cliente.
+ */
+public class ProductoEntradaDTO {
+
+	private String nombre;
+	private Double precio;
+	private Integer stock;
+
+	public ProductoEntradaDTO() {
+	}
+
+	public ProductoEntradaDTO(String nombre, Double precio, Integer stock) {
+		this.nombre = nombre;
+		this.precio = precio;
+		this.stock = stock;
+	}
+
+	public String getNombre() {
+		return nombre;
+	}
+
+	public void setNombre(String nombre) {
+		this.nombre = nombre;
+	}
+
+	public Double getPrecio() {
+		return precio;
+	}
+
+	public void setPrecio(Double precio) {
+		this.precio = precio;
+	}
+
+	public Integer getStock() {
+		return stock;
+	}
+
+	public void setStock(Integer stock) {
+		this.stock = stock;
+	}
+}
