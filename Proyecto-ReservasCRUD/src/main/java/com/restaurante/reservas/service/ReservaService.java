@@ -15,7 +15,13 @@ public class ReservaService {
         this.reservaRepository = reservaRepository;
     }
 
+    // Método para mostrar las reservas
     public List<Reserva> listarReservas() {
         return reservaRepository.findAll();
+    }
+    
+    // Método para guardar reservas
+    public Reserva guardarReserva(Reserva reserva) {
+        return reservaRepository.save(reserva);
     }
 }

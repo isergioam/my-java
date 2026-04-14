@@ -4,6 +4,8 @@ import com.restaurante.reservas.model.Reserva;
 import com.restaurante.reservas.service.ReservaService;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -23,5 +25,10 @@ public class ReservaController {
     @GetMapping
     public List<Reserva> obtenerReservas() {
         return reservaService.listarReservas();
+    }
+    
+    @PostMapping
+    public Reserva crearReserva(@RequestBody Reserva reserva) {
+        return reservaService.guardarReserva(reserva);
     }
 }
